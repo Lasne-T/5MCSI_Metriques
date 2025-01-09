@@ -28,7 +28,18 @@
             var options = {
               title: 'Évolution des températures de la ville de Tawarano',
               legend: { position: 'bottom' },
-              bars: 'horizontal'
+              bars: 'vertical', // Afficher les données de haut en bas
+              hAxis: {
+                title: 'Valeur',
+                minValue: 0
+              },
+              vAxis: {
+                title: 'Date',
+                textStyle: {
+                  fontSize: 12, // Ajuster la taille de la police pour espacer les dates
+                  padding: 10 // Ajouter de l'espace entre les dates
+                }
+              }
             };
 
             var chart = new google.charts.Bar(document.getElementById('chart_div'));
