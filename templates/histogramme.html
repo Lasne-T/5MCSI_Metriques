@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -25,14 +24,14 @@
               dataTable.addRow([date.toLocaleDateString(), entry.temp]);
             });
 
-            // Configurer les options du graphique en ligne
+            // Configurer les options du graphique en barres
             var options = {
               title: 'Évolution des températures de la ville de Tawarano',
-              legend: { position: 'bottom' }
-              ,bars: 'horizontal'
+              legend: { position: 'bottom' },
+              bars: 'horizontal'
             };
 
-            var chart = new google.visualization.Bar(document.getElementById('chart_div'));
+            var chart = new google.charts.Bar(document.getElementById('chart_div'));
             chart.draw(dataTable, google.charts.Bar.convertOptions(options));
           });
       }
