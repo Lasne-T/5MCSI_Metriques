@@ -32,7 +32,7 @@
             };
 
             var chart = new google.visualization.Bar(document.getElementById('chart_div'));
-            chart.draw(dataTable, options);
+            chart.draw(dataTable, google.charts.Bar.convertOptions(options));
           });
       }
     </script>
